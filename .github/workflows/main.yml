@@ -18,18 +18,16 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - uses: actions/setup-python@v1
-        with:
-          python-version: '3.7.9'
-          architecture: 'x64'
+#       - uses: actions/setup-python@v1
+#         with:
+#           python-version: '3.7.9'
+#           architecture: 'x64'
       
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          python -v
           echo Add other actions to build,
           echo test, and deploy your project.
+          python test_tmp1.py
           python
-          python ./test_selenium.py
-          python ../../../test_selenium.py
-          python ../../test_selenium.py
+          # python test_selenium.py
