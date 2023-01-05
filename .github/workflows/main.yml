@@ -33,6 +33,5 @@ jobs:
         
       - name: Run python script
         run: |
-          echo begin run the scripts,
           python test_tmp1.py
           python test_selenium.py
