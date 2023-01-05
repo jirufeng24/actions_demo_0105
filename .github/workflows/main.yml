@@ -27,10 +27,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: main
+      - name: install library
+        run: |
+          pip install -r requirements.txt
         
       - name: Run python script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo begin run the scripts,
           python test_tmp1.py
           python test_selenium.py
