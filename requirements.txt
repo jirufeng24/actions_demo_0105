@@ -1,0 +1,3 @@
+selenium == 3.141.0
+tcping == 0.1.1rc1
+xlrd == 1.2.0
