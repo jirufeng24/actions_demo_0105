@@ -14,11 +14,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       #- uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
+      # Runs a ingle command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-
+        
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.7.0'
+          architecture: 'x64'
+      
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
