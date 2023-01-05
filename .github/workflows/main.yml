@@ -30,6 +30,7 @@ jobs:
       - name: install library
         run: |
           pip install -r requirements.txt
+          pip list
         
       - name: Run python script
         run: |
