@@ -1,0 +1,12 @@
+robotframework-archivelibrary	==0.4.0
+robotframework-ftplibrary		==1.9
+robotframework-pythonlibcore	==2.2.1
+robotframework-selenium2library	==3.0.0
+robotframework-seleniumlibrary	==5.1.0
+robotframework					==3.2.2
+robotframework-sshlibrary		==3.6.0
+nidaqmx							==0.5.7
+Appium-Python-Client			==1.0.2
+selenium                        ==3.141.0
+setuptools                      ==49.2.1
+uiautomator2                    ==2.12.2
