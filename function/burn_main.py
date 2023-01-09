@@ -3,4 +3,4 @@ def calc(a,b):
   print("sum=",sum1)
   return sum
 c=calc(1,2)
-print("c=",c1)
+print("c=",c)
