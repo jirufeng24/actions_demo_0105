@@ -1,6 +1,5 @@
 name: CI
 
-# Controls when the workflow will run
 on:
   workflow_dispatch:
 
@@ -10,30 +9,35 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v3
-      # Runs a ingle command using the runners shell
-      - name: Run a input script
-        run: echo Hello, world!
+      - name: step1:-Upgrade version file for gateway.
+        run: |
+          echo 开始执行网关烧录版本脚本--
+          python function/burn_main.py
+          echo 网关烧录版本完成--
         
 #       - uses: actions/setup-python@v1
 #         with:
 #           python-version: '3.7.9'
 #           architecture: 'x64'
 
-      - name: Checkout
+      - name: step2:-Checkout the case's scripts.
         uses: actions/checkout@v2
         with:
           ref: main
-      - name: install library
+          
+      - name: step3:-Automatically install the libraries.
         run: |
-          pip install -r requirements.txt
-          pip list
+          echo 开始检查安装case脚本依赖的库和类
+          pip install -r function/requirements.txt
+          pip install -r gateway_web_lib/requirements.txt
+          pip install -r mobile_lib/requirements.txt
+          echo 安装case脚本依赖库结束
         
-      - name: Run python script
+      - name: step4:-Run the testcase script.
         run: |
-          python test_selenium.py
+          echo 开始网关回归案例脚本执行
+          robot --include nightlyANDhubANDwebpage PAS_500&700&700LT&DP
+          echo 回归案例脚本执行结束
 
 
