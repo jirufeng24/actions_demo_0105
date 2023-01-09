@@ -10,7 +10,13 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: step1:-Upgrade version file for gateway.
+    
+      - name: step1:-Checkout the case's scripts.
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          
+      - name: step2:-Upgrade version file for gateway.
         run: |
           echo 开始执行网关烧录版本脚本--
           python .\function/burn_main.py
@@ -20,11 +26,6 @@ jobs:
 #         with:
 #           python-version: '3.7.9'
 #           architecture: 'x64'
-
-      - name: step2:-Checkout the case's scripts.
-        uses: actions/checkout@v2
-        with:
-          ref: main
           
       - name: step3:-Automatically install the libraries.
         run: |
