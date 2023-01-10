@@ -38,7 +38,7 @@ jobs:
       - name: step4:-Run the testcase script.
         run: |
           echo 开始网关回归案例脚本执行
-          robot -o -l .\log -r .\report -o .\output --include cloudANDgateway "PAS_500&700&700LT&DP"
+          robot -l .\log -r .\report -o .\output --include cloudANDgateway "PAS_500&700&700LT&DP"
           echo 回归案例脚本执行结束
           
       
