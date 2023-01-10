@@ -6,8 +6,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    steps:
     
+    steps:
       - name: step0:- install python.
         uses: actions/setup-python@v1
         with:
