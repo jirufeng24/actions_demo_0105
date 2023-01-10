@@ -34,11 +34,20 @@ jobs:
           pip install -r .\gateway_web_lib/requirements.txt
           pip install -r .\mobile_lib/requirements.txt
           echo 安装case脚本依赖库结束
-        
+          
+      - name: 拉代码1.
+        uses: actions/checkout@v2
+        with:
+          ref: main
       - name: step4:-Run the testcase script.
         run: |
           echo 开始网关回归案例脚本执行
           robot --include cloudANDgateway "PAS_500&700&700LT&DP"
           echo 回归案例脚本执行结束
+          
+      - name: 拉代码2.
+        uses: actions/checkout@v2
+        with:
+          ref: main
 
 
