@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 def calc(a,b):
   sum = a+b
   print("sum=",sum)
@@ -5,4 +7,5 @@ def calc(a,b):
 c=calc(1,2)
 print("c=",c)
 file = open('txt_file.txt','w')
-file.write('hello，\n  Python。')
+file.write('hello,Python.')
+
