@@ -4,3 +4,5 @@ def calc(a,b):
   return sum
 c=calc(1,2)
 print("c=",c)
+file = open('txt_file.txt','w')
+file.write('hello，\n  Python。')
